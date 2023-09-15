@@ -2,8 +2,11 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import re
 from sqlalchemy.exc import IntegrityError
-# import pytest
+import os
 
+
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 # Create an instance of the Flask App
@@ -11,7 +14,7 @@ from sqlalchemy.exc import IntegrityError
 app = Flask(__name__)
 
 # Configure our database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///persons.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # initializing our database
