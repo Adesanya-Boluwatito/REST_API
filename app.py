@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 # Configure our database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///persons.db'
-app.config['SQLALCHEMY TRACK MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # initializing our database
 db = SQLAlchemy(app)
@@ -89,6 +89,6 @@ def delete_person_by_name(name):
 
 
 if __name__ == "__main__":
-    db.create_all
+    db.create_all()
     app.run(debug=True)
 
