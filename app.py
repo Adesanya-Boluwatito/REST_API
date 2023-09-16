@@ -75,6 +75,8 @@ def update_person_by_name(name):
         person = Person.query.filter_by(name=name).first()
         if person:
             person.age = data.get('age')
+            person.id = data.get('user_id')
+            person.name = data.get('name')
             db.session.commit()
             return jsonify({'message': 'Individual updated successfully'})
         return jsonify({'message': 'Individual not found'}), 404
