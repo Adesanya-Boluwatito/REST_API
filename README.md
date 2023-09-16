@@ -90,7 +90,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## UML Diagrams
 
-- [View UML Class Diagram](link-to-your-uml-diagram.png)
+- [View UML Class Diagram](https://github.com/Adesanya-Boluwatito/Zuri_Stage2/blob/main/UML/UML%20for%20API.drawio.png)
 
 ## Contributing
 
